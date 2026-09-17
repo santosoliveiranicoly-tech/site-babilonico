@@ -1,0 +1,3788 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nicky Store | Acessórios Aesthetic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gold: #c9a45c;
+            --gold-dark: #a9823d;
+            --gold-light: #ead8aa;
+            --cream: #fffaf0;
+            --white: #ffffff;
+            --black: #302b27;
+            --gray: #77716b;
+            --border: #eadfca;
+            --shadow: 0 10px 30px rgba(130, 100, 50, .10);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: var(--cream);
+            color: var(--black);
+        }
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, .94);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .top-bar {
+            background: var(--black);
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .navbar {
+            max-width: 1400px;
+            margin: auto;
+            height: 80px;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 38px;
+            font-weight: 600;
+            color: var(--gold-dark);
+            letter-spacing: 2px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: var(--black);
+        }
+
+        .search {
+            flex: 1;
+            max-width: 550px;
+            position: relative;
+        }
+
+        .search input {
+            width: 100%;
+            border: 1px solid var(--border);
+            background: #fffdf8;
+            padding: 14px 50px 14px 20px;
+            border-radius: 30px;
+            outline: none;
+            color: var(--black);
+        }
+
+        .search button {
+            position: absolute;
+            right: 7px;
+            top: 5px;
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            background: var(--gold);
+            color: white;
+            cursor: pointer;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .icon-btn {
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--border);
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+            color: var(--gold-dark);
+            font-size: 18px;
+            transition: .3s;
+        }
+
+        .icon-btn:hover {
+            background: var(--gold);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        nav {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            padding-bottom: 14px;
+        }
+
+        nav a {
+            color: var(--black);
+            text-decoration: none;
+            font-size: 13px;
+            transition: .2s;
+        }
+
+        nav a:hover {
+            color: var(--gold-dark);
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 650px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            max-width: 1400px;
+            margin: auto;
+            padding: 70px 50px;
+            gap: 50px;
+        }
+
+        .hero-text small {
+            color: var(--gold-dark);
+            letter-spacing: 4px;
+            font-size: 12px;
+        }
+
+        .hero-text h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(55px, 7vw, 100px);
+            font-weight: 500;
+            line-height: .9;
+            margin: 25px 0;
+        }
+
+        .hero-text h1 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero-text p {
+            max-width: 500px;
+            line-height: 1.9;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .gold-btn {
+            border: none;
+            background: var(--gold);
+            color: white;
+            padding: 15px 32px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: .3s;
+        }
+
+        .gold-btn:hover {
+            background: var(--gold-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(169, 130, 61, .25);
+        }
+
+        .hero-image {
+            height: 540px;
+            border-radius: 250px 250px 15px 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            background: rgba(255,255,255,.93);
+            padding: 18px 25px;
+            border-left: 3px solid var(--gold);
+        }
+
+        .hero-badge strong {
+            display: block;
+            font-family: "Cormorant Garamond";
+            font-size: 23px;
+        }
+
+        /* ================= BENEFITS ================= */
+
+        .benefits {
+            background: white;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .benefit {
+            padding: 25px;
+            text-align: center;
+            border-right: 1px solid var(--border);
+        }
+
+        .benefit:last-child {
+            border: none;
+        }
+
+        .benefit .emoji {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .benefit strong {
+            display: block;
+            font-size: 13px;
+        }
+
+        .benefit p {
+            font-size: 11px;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+
+        /* ================= SECTIONS ================= */
+
+        .section {
+            max-width: 1400px;
+            margin: auto;
+            padding: 80px 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title small {
+            color: var(--gold-dark);
+            letter-spacing: 3px;
+        }
+
+        .section-title h2 {
+            font-family: "Cormorant Garamond";
+            font-size: 52px;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        /* ================= CATEGORIES ================= */
+
+        .categories {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 10px 5px 20px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--gold) transparent;
+        }
+
+        .category {
+            min-width: 190px;
+            height: 240px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 100px 100px 15px 15px;
+            cursor: pointer;
+        }
+
+        .category img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .category:hover img {
+            transform: scale(1.08);
+        }
+
+        .category span {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 9px 20px;
+            border-radius: 20px;
+            white-space: nowrap;
+            font-size: 12px;
+        }
+
+        /* ================= PRODUCTS ================= */
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .product {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            transition: .3s;
+        }
+
+        .product:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+        }
+
+        .product-img {
+            height: 280px;
+            position: relative;
+            overflow: hidden;
+            background: #f8f4eb;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .product:hover .product-img img {
+            transform: scale(1.06);
+        }
+
+        .favorite {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 36px;
+            height: 36px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255,255,255,.9);
+            cursor: pointer;
+            color: var(--gold-dark);
+            font-size: 18px;
+        }
+
+        .tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--gold);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 10px;
+        }
+
+        .product-info {
+            padding: 18px;
+        }
+
+        .product-info small {
+            color: var(--gold-dark);
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        .product-info h3 {
+            font-family: "Cormorant Garamond";
+            font-size: 24px;
+            font-weight: 600;
+            margin: 4px 0;
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        .old-price {
+            color: #aaa;
+            text-decoration: line-through;
+            font-size: 11px;
+            margin-left: 5px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .product-actions button {
+            flex: 1;
+            border: 1px solid var(--gold);
+            background: white;
+            color: var(--gold-dark);
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 11px;
+        }
+
+        .product-actions button:last-child {
+            background: var(--gold);
+            color: white;
+        }
+
+        /* ================= BANNER ================= */
+
+        .banner {
+            max-width: 1340px;
+            margin: 30px auto;
+            min-height: 350px;
+            background:
+                linear-gradient(90deg, rgba(255,250,240,.97), rgba(255,250,240,.3)),
+                url("https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1600&q=80")
+                center/cover;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .banner-content {
+            max-width: 500px;
+        }
+
+        .banner h2 {
+            font-family: "Cormorant Garamond";
+            font-size: 55px;
+            font-weight: 500;
+        }
+
+        .banner p {
+            color: var(--gray);
+            margin: 15px 0 25px;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .about-text small {
+            color: var(--gold-dark);
+            letter-spacing: 3px;
+        }
+
+        .about-text h2 {
+            font-family: "Cormorant Garamond";
+            font-size: 55px;
+            font-weight: 500;
+            margin: 15px 0;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #302b27;
+            color: white;
+            padding: 60px 30px 25px;
+        }
+
+        .footer-grid {
+            max-width: 1300px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        footer .logo {
+            color: var(--gold-light);
+        }
+
+        footer h3 {
+            font-family: "Cormorant Garamond";
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        footer p,
+        footer a {
+            color: #c8c2bb;
+            font-size: 12px;
+            line-height: 2;
+            text-decoration: none;
+        }
+
+        footer a {
+            display: block;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            max-width: 1300px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid #554f49;
+            color: #aaa;
+            font-size: 11px;
+            text-align: center;
+        }
+
+        /* ================= MODAL ================= */
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(30,25,20,.55);
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-box {
+            width: min(900px, 100%);
+            max-height: 90vh;
+            overflow-y: auto;
+            background: white;
+            border-radius: 20px;
+            position: relative;
+            padding: 35px;
+            animation: modalIn .3s ease;
+        }
+
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: scale(.94);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 18px;
+            border: none;
+            background: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--gray);
+        }
+
+        .product-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+        .product-detail img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .detail-info h2 {
+            font-family: "Cormorant Garamond";
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        .detail-info p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+
+        .detail-price {
+            font-size: 25px;
+            color: var(--gold-dark);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* ================= LOGIN / HELP ================= */
+
+        .form-box {
+            max-width: 450px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .form-box h2 {
+            font-family: "Cormorant Garamond";
+            font-size: 50px;
+            font-weight: 500;
+        }
+
+        .form-box p {
+            color: var(--gray);
+            font-size: 13px;
+            margin: 8px 0 25px;
+        }
+
+        .form-box input,
+        .form-box textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .form-box textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .form-box .gold-btn {
+            width: 100%;
+        }
+
+        .faq {
+            border-bottom: 1px solid var(--border);
+            padding: 18px 0;
+            cursor: pointer;
+        }
+
+        .faq h3 {
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq p {
+            display: none;
+            color: var(--gray);
+            font-size: 13px;
+            line-height: 1.8;
+            padding-top: 12px;
+        }
+
+        .faq.open p {
+            display: block;
+        }
+
+        /* ================= CART ================= */
+
+        .cart-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cart-item img {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-info h4 {
+            font-family: "Cormorant Garamond";
+            font-size: 20px;
+        }
+
+        .cart-total {
+            text-align: right;
+            font-size: 22px;
+            margin: 20px 0;
+            color: var(--gold-dark);
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width: 900px) {
+            .navbar {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 15px;
+            }
+
+            .search {
+                order: 3;
+                flex-basis: 100%;
+                max-width: none;
+            }
+
+            nav {
+                overflow-x: auto;
+                justify-content: flex-start;
+                padding: 10px 20px;
+            }
+
+            .hero,
+            .about,
+            .product-detail {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 50px 25px;
+            }
+
+            .hero-image {
+                height: 430px;
+            }
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefits {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media(max-width: 550px) {
+            .logo {
+                font-size: 30px;
+            }
+
+            .hero-text h1 {
+                font-size: 62px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .benefit {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .banner {
+                padding: 30px;
+            }
+
+            .banner h2 {
+                font-size: 43px;
+            }
+
+            .product-detail img {
+                height: 320px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <div class="top-bar">
+        ✦ FRETE GRÁTIS NAS COMPRAS ACIMA DE R$ 199 ✦
+    </div>
+
+    <div class="navbar">
+
+        <div class="logo" onclick="goHome()">
+            Nicky <span>Store</span>
+        </div>
+
+        <div class="search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="O que você está procurando?"
+                onkeyup="searchProducts()"
+            >
+            <button>⌕</button>
+        </div>
+
+        <div class="nav-icons">
+            <button class="icon-btn" onclick="openModal('loginModal')">♙</button>
+            <button class="icon-btn" onclick="openModal('cartModal')">
+                🛍
+                <span id="cartCount">0</span>
+            </button>
+        </div>
+
+    </div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#categorias">Categorias</a>
+        <a href="#mais-vendidos">Mais vendidos</a>
+        <a href="#novidades">Novidades</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#ajuda">Ajuda</a>
+        <a href="#divulgacao">Divulgação</a>
+    </nav>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<main id="inicio">
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <small>NICKY STORE — COLLECTION 2026</small>
+
+        <h1>
+            Seu estilo,<br>
+            sua <span>essência.</span>
+        </h1>
+
+        <p>
+            Acessórios delicados e sofisticados para transformar
+            pequenos detalhes em grandes momentos.
+        </p>
+
+        <button class="gold-btn" onclick="scrollToSection('mais-vendidos')">
+            EXPLORAR COLEÇÃO
+        </button>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1000&q=85"
+            alt="Acessórios dourados"
+        >
+
+        <div class="hero-badge">
+            <strong>Golden Collection</strong>
+            Elegância em cada detalhe
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BENEFÍCIOS ================= -->
+
+<div class="benefits">
+
+    <div class="benefit">
+        <div class="emoji">✦</div>
+        <strong>Peças selecionadas</strong>
+        <p>Curadoria especial Nicky</p>
+    </div>
+
+    <div class="benefit">
+        <div class="emoji">♡</div>
+        <strong>Compra segura</strong>
+        <p>Seus dados protegidos</p>
+    </div>
+
+    <div class="benefit">
+        <div class="emoji">♧</div>
+        <strong>Embalagem premium</strong>
+        <p>Seu pedido preparado com carinho</p>
+    </div>
+
+    <div class="benefit">
+        <div class="emoji">✈</div>
+        <strong>Envio para todo Brasil</strong>
+        <p>Receba onde estiver</p>
+    </div>
+
+</div>
+
+
+<!-- ================= CATEGORIAS ================= -->
+
+<section class="section" id="categorias">
+
+    <div class="section-title">
+        <small>EXPLORE</small>
+        <h2>Encontre seu estilo</h2>
+        <p>Escolha uma categoria e descubra nossas peças.</p>
+    </div>
+
+    <div class="categories">
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80">
+            <span>Colares</span>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=600&q=80">
+            <span>Anéis</span>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80">
+            <span>Brincos</span>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80">
+            <span>Pulseiras</span>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=600&q=80">
+            <span>Relógios</span>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80">
+            <span>Presentes</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUTOS ================= -->
+
+<section class="section" id="mais-vendidos">
+
+    <div class="section-title">
+        <small>BEST SELLERS</small>
+        <h2>Mais vendidos</h2>
+        <p>As peças favoritas das nossas clientes.</p>
+    </div>
+
+    <div class="products" id="productGrid">
+
+        <!-- Produto 1 -->
+        <article class="product" data-name="Colar Aurora">
+
+            <div class="product-img">
+
+                <span class="tag">BEST SELLER</span>
+
+                <button
+                    class="favorite"
+                    onclick="toggleFavorite(this)"
+                >♡</button>
+
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="product-info">
+
+                <small>COLARES</small>
+
+                <h3>Colar Aurora</h3>
+
+                <div class="stars">★★★★★</div>
+
+                <span class="price">R$ 129,90</span>
+                <span class="old-price">R$ 159,90</span>
+
+                <div class="product-actions">
+
+                    <button onclick="showProduct(0)">
+                        Ver detalhes
+                    </button>
+
+                    <button onclick="addToCart(0)">
+                        Adicionar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Produto 2 -->
+        <article class="product" data-name="Anel Lumière">
+
+            <div class="product-img">
+
+                <span class="tag">NOVO</span>
+
+                <button class="favorite" onclick="toggleFavorite(this)">♡</button>
+
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="product-info">
+
+                <small>ANÉIS</small>
+
+                <h3>Anel Lumière</h3>
+
+                <div class="stars">★★★★★</div>
+
+                <span class="price">R$ 89,90</span>
+
+                <div class="product-actions">
+
+                    <button onclick="showProduct(1)">
+                        Ver detalhes
+                    </button>
+
+                    <button onclick="addToCart(1)">
+                        Adicionar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Produto 3 -->
+        <article class="product" data-name="Brinco Celeste">
+
+            <div class="product-img">
+
+                <button class="favorite" onclick="toggleFavorite(this)">♡</button>
+
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="product-info">
+
+                <small>BRINCOS</small>
+
+                <h3>Brinco Celeste</h3>
+
+                <div class="stars">★★★★★</div>
+
+                <span class="price">R$ 109,90</span>
+
+                <div class="product-actions">
+
+                    <button onclick="showProduct(2)">
+                        Ver detalhes
+                    </button>
+
+                    <button onclick="addToCart(2)">
+                        Adicionar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Produto 4 -->
+        <article class="product" data-name="Pulseira Étoile">
+
+            <div class="product-img">
+
+                <span class="tag">TREND</span>
+
+                <button class="favorite" onclick="toggleFavorite(this)">♡</button>
+
+                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="product-info">
+
+                <small>PULSEIRAS</small>
+
+                <h3>Pulseira Étoile</h3>
+
+                <div class="stars">★★★★★</div>
+
+                <span class="price">R$ 119,90</span>
+
+                <div class="product-actions">
+
+                    <button onclick="showProduct(3)">
+                        Ver detalhes
+                    </button>
+
+                    <button onclick="addToCart(3)">
+                        Adicionar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Produto 5 -->
+        <article class="product" data-name="Relógio Élégance">
+
+            <div class="product-img">
+
+                <button class="favorite" onclick="toggleFavorite(this)">♡</button>
+
+                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="product-info">
+
+                <small>RELÓGIOS</small>
+
+                <h3>Élégance Gold</h3>
+
+                <div class="stars">★★★★★</div>
+
+                <span class="price">R$ 299,90</span>
+
+                <div class="product-actions">
+
+                    <button onclick="showProduct(4)">
+                        Ver detalhes
+                    </button>
+
+                    <button onclick="addToCart(4)">
+                        Adicionar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Produto 6 -->
+        <article class="product" data-name="Colar Pérola">
+
+            <div class="product-img">
+
+                <span class="tag">LUXURY</span>
+
+                <button class="favorite" onclick="toggleFavorite(this)">♡</button>
+
+                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="product-info">
+
+                <small>COLARES</small>
+
+                <h3>Perle D'or</h3>
+
+                <div class="stars">★★★★★</div>
+
+                <span class="price">R$ 179,90</span>
+
+                <div class="product-actions">
+
+                    <button onclick="showProduct(5)">
+                        Ver detalhes
+                    </button>
+
+                    <button onclick="addToCart(5)">
+                        Adicionar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Produto 7 -->
+        <article class="product" data-name="Brinco Golden">
+
+            <div class="product-img">
+
+                <button class="favorite" onclick="toggleFavorite(this)">♡</button>
+
+                <img src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="product-info">
+
+                <small>BRINCOS</small>
+
+                <h3>Golden Drop</h3>
+
+                <div class="stars">★★★★★</div>
+
+                <span class="price">R$ 99,90</span>
+
+                <div class="product-actions">
+
+                    <button onclick="showProduct(6)">
+                        Ver detalhes
+                    </button>
+
+                    <button onclick="addToCart(6)">
+                        Adicionar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Produto 8 -->
+        <article class="product" data-name="Anel Imperial">
+
+            <div class="product-img">
+
+                <span class="tag">LIMITADO</span>
+
+                <button class="favorite" onclick="toggleFavorite(this)">♡</button>
+
+                <img src="https://images.unsplash.com/photo-1598560917807-1bae44bd2be8?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="product-info">
+
+                <small>ANÉIS</small>
+
+                <h3>Imperial Ring</h3>
+
+                <div class="stars">★★★★★</div>
+
+                <span class="price">R$ 149,90</span>
+
+                <div class="product-actions">
+
+                    <button onclick="showProduct(7)">
+                        Ver detalhes
+                    </button>
+
+                    <button onclick="addToCart(7)">
+                        Adicionar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BANNER ================= -->
+
+<section id="divulgacao">
+
+    <div class="banner">
+
+        <div class="banner-content">
+
+            <small>GOLDEN WEEK</small>
+
+            <h2>
+                Um toque de luxo<br>
+                para você.
+            </h2>
+
+            <p>
+                Descubra nossa seleção especial de acessórios
+                dourados e delicados.
+            </p>
+
+            <button
+                class="gold-btn"
+                onclick="scrollToSection('mais-vendidos')"
+            >
+                COMPRAR AGORA
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NOVIDADES ================= -->
+
+<section class="section" id="novidades">
+
+    <div class="section-title">
+        <small>NEW IN</small>
+        <h2>Novidades Nicky</h2>
+        <p>Peças recém-chegadas à nossa boutique.</p>
+    </div>
+
+    <div class="products">
+
+        <article class="product">
+
+            <div class="product-img">
+                <span class="tag">NEW</span>
+                <img src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=700&q=80">
+            </div>
+
+            <div class="product-info">
+                <small>COLLECTION</small>
+                <h3>Golden Pearl</h3>
+                <div class="stars">★★★★★</div>
+                <span class="price">R$ 139,90</span>
+                <div class="product-actions">
+                    <button onclick="showProduct(5)">Ver detalhes</button>
+                    <button onclick="addToCart(5)">Adicionar</button>
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="product">
+
+            <div class="product-img">
+                <span class="tag">NEW</span>
+                <img src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&w=700&q=80">
+            </div>
+
+            <div class="product-info">
+                <small>COLLECTION</small>
+                <h3>Fine Gold</h3>
+                <div class="stars">★★★★★</div>
+                <span class="price">R$ 159,90</span>
+                <div class="product-actions">
+                    <button onclick="showProduct(0)">Ver detalhes</button>
+                    <button onclick="addToCart(0)">Adicionar</button>
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="product">
+
+            <div class="product-img">
+                <span class="tag">NEW</span>
+                <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=80">
+            </div>
+
+            <div class="product-info">
+                <small>COLLECTION</small>
+                <h3>Royal Glow</h3>
+                <div class="stars">★★★★★</div>
+                <span class="price">R$ 199,90</span>
+                <div class="product-actions">
+                    <button onclick="showProduct(4)">Ver detalhes</button>
+                    <button onclick="addToCart(4)">Adicionar</button>
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="product">
+
+            <div class="product-img">
+                <span class="tag">NEW</span>
+                <img src="https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?auto=format&fit=crop&w=700&q=80">
+            </div>
+
+            <div class="product-info">
+                <small>COLLECTION</small>
+                <h3>La Perle</h3>
+                <div class="stars">★★★★★</div>
+                <span class="price">R$ 169,90</span>
+                <div class="product-actions">
+                    <button onclick="showProduct(5)">Ver detalhes</button>
+                    <button onclick="addToCart(5)">Adicionar</button>
+                </div>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SOBRE ================= -->
+
+<section class="section" id="sobre">
+
+    <div class="about">
+
+        <img
+            src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1000&q=80"
+            alt="Coleção Nicky Store"
+        >
+
+        <div class="about-text">
+
+            <small>OUR STORY</small>
+
+            <h2>
+                Feita para<br>
+                mulheres únicas.
+            </h2>
+
+            <p>
+                A Nicky Store nasceu para transformar acessórios
+                em pequenas expressões de personalidade.
+            </p>
+
+            <p>
+                Nossa curadoria combina delicadeza, elegância
+                e aquele toque dourado que deixa qualquer
+                produção ainda mais especial.
+            </p>
+
+            <button class="gold-btn" onclick="openModal('helpModal')">
+                FALE CONOSCO
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= AJUDA ================= -->
+
+<section class="section" id="ajuda">
+
+    <div class="section-title">
+        <small>HELP CENTER</small>
+        <h2>Como podemos ajudar?</h2>
+        <p>Encontre respostas para as dúvidas mais comuns.</p>
+    </div>
+
+    <div style="max-width:800px;margin:auto;">
+
+        <div class="faq" onclick="toggleFaq(this)">
+            <h3>
+                Qual o prazo de entrega?
+                <span>+</span>
+            </h3>
+            <p>
+                O prazo depende da sua região e da modalidade
+                escolhida no checkout. Após o envio, você receberá
+                o código de rastreamento.
+            </p>
+        </div>
+
+        <div class="faq" onclick="toggleFaq(this)">
+            <h3>
+                Como cuidar dos acessórios?
+                <span>+</span>
+            </h3>
+            <p>
+                Evite contato prolongado com água, perfumes,
+                cremes e produtos químicos. Guarde cada peça
+                em local seco e protegido.
+            </p>
+        </div>
+
+        <div class="faq" onclick="toggleFaq(this)">
+            <h3>
+                Posso trocar minha peça?
+                <span>+</span>
+            </h3>
+            <p>
+                Sim. Consulte nossa política de troca e devolução
+                para verificar prazos e condições.
+            </p>
+        </div>
+
+        <div class="faq" onclick="toggleFaq(this)">
+            <h3>
+                Quais formas de pagamento?
+                <span>+</span>
+            </h3>
+            <p>
+                A loja pode aceitar cartão, Pix e outras formas
+                configuradas no sistema de pagamento.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <div class="logo">
+                Nicky <span>Store</span>
+            </div>
+
+            <p style="margin-top:15px;">
+                Acessórios que contam histórias.
+                Delicadeza, elegância e personalidade
+                em cada detalhe.
+            </p>
+
+        </div>
+
+        <div>
+            <h3>Loja</h3>
+            <a href="#categorias">Categorias</a>
+            <a href="#mais-vendidos">Mais vendidos</a>
+            <a href="#novidades">Novidades</a>
+            <a href="#divulgacao">Ofertas</a>
+        </div>
+
+        <div>
+            <h3>Atendimento</h3>
+            <a href="#ajuda">Central de ajuda</a>
+            <a href="#" onclick="openModal('helpModal')">Fale conosco</a>
+            <a href="#">Trocas e devoluções</a>
+            <a href="#">Rastrear pedido</a>
+        </div>
+
+        <div>
+            <h3>Redes sociais</h3>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">Pinterest</a>
+            <a href="#">WhatsApp</a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Nicky Store — Todos os direitos reservados.
+    </div>
+
+</footer>
+
+
+<!-- ================= MODAL PRODUTO ================= -->
+
+<div class="modal" id="productModal">
+
+    <div class="modal-box">
+
+        <button class="close" onclick="closeModal('productModal')">
+            ×
+        </button>
+
+        <div class="product-detail">
+
+            <img id="detailImage" src="" alt="Produto">
+
+            <div class="detail-info">
+
+                <small id="detailCategory"></small>
+
+                <h2 id="detailName"></h2>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <div class="detail-price" id="detailPrice"></div>
+
+                <p id="detailDescription"></p>
+
+                <p>
+                    ✦ Acabamento premium<br>
+                    ✦ Embalagem especial Nicky Store<br>
+                    ✦ Design delicado e sofisticado
+                </p>
+
+                <button
+                    class="gold-btn"
+                    style="width:100%;"
+                    id="detailAdd"
+                >
+                    ADICIONAR AO CARRINHO
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= LOGIN ================= -->
+
+<div class="modal" id="loginModal">
+
+    <div class="modal-box">
+
+        <button class="close" onclick="closeModal('loginModal')">
+            ×
+        </button>
+
+        <div class="form-box">
+
+            <small style="color:var(--gold-dark);letter-spacing:3px;">
+                NICKY STORE
+            </small>
+
+            <h2>Bem-vinda ♡</h2>
+
+            <p>
+                Entre na sua conta para acompanhar seus pedidos.
+            </p>
+
+            <input
+                type="email"
+                placeholder="Seu e-mail"
+            >
+
+            <input
+                type="password"
+                placeholder="Sua senha"
+            >
+
+            <button
+                class="gold-btn"
+                onclick="login()"
+            >
+                ENTRAR
+            </button>
+
+            <p style="margin-top:18px;">
+                Ainda não possui uma conta?
+                <b style="color:var(--gold-dark);cursor:pointer;">
+                    Criar conta
+                </b>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CARRINHO ================= -->
+
+<div class="modal" id="cartModal">
+
+    <div class="modal-box">
+
+        <button class="close" onclick="closeModal('cartModal')">
+            ×
+        </button>
+
+        <div class="form-box" style="max-width:700px;">
+
+            <small style="color:var(--gold-dark);letter-spacing:3px;">
+                NICKY STORE
+            </small>
+
+            <h2>Seu carrinho</h2>
+
+            <div id="cartItems"></div>
+
+            <div class="cart-total">
+                Total: <strong id="cartTotal">R$ 0,00</strong>
+            </div>
+
+            <button class="gold-btn" onclick="checkout()">
+                FINALIZAR COMPRA
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CONTATO ================= -->
+
+<div class="modal" id="helpModal">
+
+    <div class="modal-box">
+
+        <button class="close" onclick="closeModal('helpModal')">
+            ×
+        </button>
+
+        <div class="form-box">
+
+            <small style="color:var(--gold-dark);letter-spacing:3px;">
+                CONTACT
+            </small>
+
+            <h2>Fale conosco</h2>
+
+            <p>
+                Envie sua mensagem e nossa equipe entrará
+                em contato.
+            </p>
+
+            <input
+                type="text"
+                placeholder="Seu nome"
+            >
+
+            <input
+                type="email"
+                placeholder="Seu e-mail"
+            >
+
+            <textarea
+                placeholder="Como podemos ajudar?"
+            ></textarea>
+
+            <button class="gold-btn" onclick="sendMessage()">
+                ENVIAR MENSAGEM
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    /* ================= PRODUTOS ================= */
+
+    const products = [
+
+        {
+            name: "Colar Aurora",
+            category: "COLARES",
+            price: 129.90,
+            image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=85",
+            description:
+                "O Colar Aurora combina delicadeza e brilho em uma peça versátil para usar todos os dias ou em ocasiões especiais."
+        },
+
+        {
+            name: "Anel Lumière",
+            category: "ANÉIS",
+            price: 89.90,
+            image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=85",
+            description:
+                "Um anel minimalista com acabamento dourado para complementar qualquer composição."
+        },
+
+        {
+            name: "Brinco Celeste",
+            category: "BRINCOS",
+            price: 109.90,
+            image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=900&q=85",
+            description:
+                "O Brinco Celeste foi criado para iluminar o rosto com elegância e um toque contemporâneo."
+        },
+
+        {
+            name: "Pulseira Étoile",
+            category: "PULSEIRAS",
+            price: 119.90,
+            image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=900&q=85",
+            description:
+                "Uma pulseira delicada e sofisticada, perfeita para criar combinações com outras peças."
+        },
+
+        {
+            name: "Élégance Gold",
+            category: "RELÓGIOS",
+            price: 299.90,
+            image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=900&q=85",
+            description:
+                "Um relógio elegante para quem gosta de unir funcionalidade, luxo e estética minimalista."
+        },
+
+        {
+            name: "Perle D'or",
+            category: "COLARES",
+            price: 179.90,
+            image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85",
+            description:
+                "Pérolas e dourado se encontram em uma composição clássica e atemporal."
+        },
+
+        {
+            name: "Golden Drop",
+            category: "BRINCOS",
+            price: 99.90,
+            image: "https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=900&q=85",
+            description:
+                "Brinco dourado com visual marcante e delicado ao mesmo tempo."
+        },
+
+        {
+            name: "Imperial Ring",
+            category: "ANÉIS",
+            price: 149.90,
+            image: "https://images.unsplash.com/photo-1598560917807-1bae44bd2be8?auto=format&fit=crop&w=900&q=85",
+            description:
+                "Uma peça sofisticada inspirada no brilho clássico das joias imperiais."
+        }
+
+    ];
+
+
+    /* ================= MODAIS ================= */
+
+    function openModal(id) {
+        document.getElementById(id).classList.add("active");
+        document.body.style.overflow = "hidden";
+
+        if (id === "cartModal") {
+            updateCart();
+        }
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+
+    document.querySelectorAll(".modal").forEach(modal => {
+
+        modal.addEventListener("click", function(e) {
+
+            if (e.target === modal) {
+                closeModal(modal.id);
+            }
+
+        });
+
+    });
+
+
+    /* ================= DETALHES ================= */
+
+    function showProduct(index) {
+
+        const product = products[index];
+
+        document.getElementById("detailImage").src = product.image;
+        document.getElementById("detailName").textContent = product.name;
+        document.getElementById("detailCategory").textContent = product.category;
+
+        document.getElementById("detailPrice").textContent =
+            formatPrice(product.price);
+
+        document.getElementById("detailDescription").textContent =
+            product.description;
+
+        document.getElementById("detailAdd").onclick = function() {
+            addToCart(index);
+            closeModal("productModal");
+        };
+
+        openModal("productModal");
+    }
+
+
+    /* ================= FAVORITOS ================= */
+
+    function toggleFavorite(button) {
+
+        if (button.textContent === "♡") {
+            button.textContent = "♥";
+            button.style.color = "#b8860b";
+        } else {
+            button.textContent = "♡";
+            button.style.color = "";
+        }
+
+    }
+
+
+    /* ================= CARRINHO ================= */
+
+    let cart = [];
+
+
+    function addToCart(index) {
+
+        cart.push(products[index]);
+
+        updateCart();
+
+        const button = document.getElementById("cartCount");
+
+        button.textContent = cart.length;
+
+        button.style.transform = "scale(1.4)";
+
+        setTimeout(() => {
+            button.style.transform = "scale(1)";
+        }, 200);
+
+        alert(products[index].name + " foi adicionado ao carrinho! ♡");
+    }
+
+
+    function updateCart() {
+
+        const container = document.getElementById("cartItems");
+
+        container.innerHTML = "";
+
+        if (cart.length === 0) {
+
+            container.innerHTML = `
+                <p style="
+                    padding:30px;
+                    color:#888;
+                ">
+                    Seu carrinho está vazio ♡
+                </p>
+            `;
+
+            document.getElementById("cartTotal").textContent =
+                "R$ 0,00";
+
+            return;
+        }
+
+
+        let total = 0;
+
+        cart.forEach((product, index) => {
+
+            total += product.price;
+
+            container.innerHTML += `
+
+                <div class="cart-item">
+
+                    <img src="${product.image}">
+
+                    <div class="cart-item-info">
+
+                        <h4>${product.name}</h4>
+
+                        <small>
+                            ${formatPrice(product.price)}
+                        </small>
+
+                    </div>
+
+                    <button
+                        onclick="removeCart(${index})"
+                        style="
+                            border:none;
+                            background:none;
+                            cursor:pointer;
+                            color:#999;
+                        "
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            `;
+
+        });
+
+
+        document.getElementById("cartTotal").textContent =
+            formatPrice(total);
+    }
+
+
+    function removeCart(index) {
+
+        cart.splice(index, 1);
+
+        document.getElementById("cartCount").textContent =
+            cart.length;
+
+        updateCart();
+    }
+
+
+    function formatPrice(value) {
+
+        return value.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        });
+
+    }
+
+
+    /* ================= CHECKOUT ================= */
+
+    function checkout() {
+
+        if (cart.length === 0) {
+            alert("Seu carrinho está vazio.");
+            return;
+        }
+
+        alert(
+            "Checkout demonstrativo da Nicky Store ♡\n\n" +
+            "Aqui você poderá integrar Mercado Pago, Stripe, PagSeguro ou outro gateway."
+        );
+
+    }
+
+
+    /* ================= LOGIN ================= */
+
+    function login() {
+
+        alert(
+            "Login demonstrativo!\n\n" +
+            "Para colocar o login real, conecte este formulário a um backend/banco de dados."
+        );
+
+    }
+
+
+    /* ================= CONTATO ================= */
+
+    function sendMessage() {
+
+        alert(
+            "Mensagem enviada com sucesso! ♡\n\n" +
+            "Obrigado por entrar em contato com a Nicky Store."
+        );
+
+        closeModal("helpModal");
+
+    }
+
+
+    /* ================= FAQ ================= */
+
+    function toggleFaq(element) {
+
+        element.classList.toggle("open");
+
+        const symbol = element.querySelector("span");
+
+        symbol.textContent =
+            element.classList.contains("open")
+            ? "−"
+            : "+";
+
+    }
+
+
+    /* ================= BUSCA ================= */
+
+    function searchProducts() {
+
+        const query =
+            document
+                .getElementById("searchInput")
+                .value
+                .toLowerCase();
+
+        const productsElements =
+            document.querySelectorAll(".product");
+
+        productsElements.forEach(product => {
+
+            const name =
+                product.dataset.name
+                ? product.dataset.name.toLowerCase()
+                : product.textContent.toLowerCase();
+
+            if (name.includes(query)) {
+                product.style.display = "";
+            } else {
+                product.style.display = "none";
+            }
+
+        });
+
+    }
+
+
+    /* ================= NAVEGAÇÃO ================= */
+
+    function scrollToSection(id) {
+
+        document
+            .getElementById(id)
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    }
+
+
+    function goHome() {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+    /* ================= ESC ================= */
+
+    document.addEventListener("keydown", function(e) {
+
+        if (e.key === "Escape") {
+
+            document
+                .querySelectorAll(".modal.active")
+                .forEach(modal => {
+                    closeModal(modal.id);
+                });
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
+<!-- ================= LOGIN ================= -->
+
+<div id="loginPage" class="login-page">
+
+    <div class="login-box">
+
+        <div class="login-logo">
+            <span>NICKY</span>
+            <strong>STORE</strong>
+        </div>
+
+        <h2>Bem-vindo</h2>
+        <p>Entre na sua conta para continuar.</p>
+
+
+        <!-- ESCOLHA DO TIPO DE CONTA -->
+
+        <div class="account-choice">
+
+            <button
+                id="clienteBtn"
+                class="account-btn active"
+                onclick="selecionarTipo('cliente')"
+            >
+                <span>♙</span>
+                Cliente
+            </button>
+
+            <button
+                id="adminBtn"
+                class="account-btn"
+                onclick="selecionarTipo('admin')"
+            >
+                <span>♜</span>
+                Administrador
+            </button>
+
+        </div>
+
+
+        <input
+            id="emailLogin"
+            type="email"
+            placeholder="E-mail"
+        >
+
+        <input
+            id="senhaLogin"
+            type="password"
+            placeholder="Senha"
+        >
+
+
+        <button
+            class="login-btn"
+            onclick="fazerLogin()"
+        >
+            Entrar
+        </button>
+
+        <p id="loginMensagem" class="login-mensagem"></p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= LOJA DO CLIENTE ================= -->
+
+<div id="clienteArea" class="area-site">
+
+    <header class="site-header">
+
+        <h1>NICKY STORE</h1>
+
+        <div>
+            <span>Minha conta</span>
+
+            <button onclick="logout()">
+                Sair
+            </button>
+        </div>
+
+    </header>
+
+    <div class="cliente-conteudo">
+
+        <p>NICKY STORE</p>
+
+        <h2>Joias que contam histórias.</h2>
+
+        <p>
+            Bem-vindo à nossa coleção exclusiva.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= ÁREA ADMIN ================= -->
+
+<div id="adminArea" class="admin-area">
+
+    <header class="admin-header">
+
+        <div>
+
+            <span>PAINEL ADMINISTRATIVO</span>
+
+            <h1>NICKY STORE</h1>
+
+        </div>
+
+        <button onclick="logout()">
+            Sair da conta
+        </button>
+
+    </header>
+
+
+    <div class="admin-title">
+
+        <div>
+
+            <span>GERENCIAMENTO</span>
+
+            <h2>Produtos</h2>
+
+            <p>
+                Adicione, edite ou remova joias da loja.
+            </p>
+
+        </div>
+
+        <button onclick="abrirProduto()">
+            + Novo produto
+        </button>
+
+    </div>
+
+
+    <!-- CATEGORIAS -->
+
+    <div class="categorias">
+
+        <button onclick="filtrar('Todos')">
+            Todos
+        </button>
+
+        <button onclick="filtrar('Anéis')">
+            Anéis
+        </button>
+
+        <button onclick="filtrar('Colares')">
+            Colares
+        </button>
+
+        <button onclick="filtrar('Brincos')">
+            Brincos
+        </button>
+
+        <button onclick="filtrar('Pulseiras')">
+            Pulseiras
+        </button>
+
+    </div>
+
+
+    <!-- PRODUTOS -->
+
+    <div id="produtos" class="produtos"></div>
+
+</div>
+
+
+
+<!-- ================= MODAL ================= -->
+
+<div id="modal" class="modal">
+
+    <div class="modal-box">
+
+        <span
+            class="fechar"
+            onclick="fecharModal()"
+        >
+            ×
+        </span>
+
+        <h2 id="tituloModal">
+            Novo produto
+        </h2>
+
+
+        <input
+            id="nome"
+            placeholder="Nome da joia"
+        >
+
+        <input
+            id="preco"
+            type="number"
+            placeholder="Preço"
+        >
+
+
+        <select id="categoria">
+
+            <option>Anéis</option>
+            <option>Colares</option>
+            <option>Brincos</option>
+            <option>Pulseiras</option>
+
+        </select>
+
+
+        <input
+            id="imagem"
+            placeholder="URL da imagem"
+        >
+
+
+        <button onclick="salvarProduto()">
+            Salvar produto
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<style>
+
+/* ================= GERAL ================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f5f1;
+    color: #27221d;
+}
+
+
+```html
+<!-- ================= LOGIN ================= -->
+
+<div id="loginPage" class="login-page">
+
+    <div class="login-box">
+
+        <div class="login-logo">
+            <strong>𝓝𝓲𝓬𝓴𝔂 𝓢𝓽𝓸𝓻𝓮</strong>
+        </div>
+
+        <h2>Bem-vindo</h2>
+        <p>Entre na sua conta para continuar.</p>
+
+        <div class="account-choice">
+
+            <button
+                id="clienteBtn"
+                class="account-btn active"
+                onclick="selecionarTipo('cliente')"
+            >
+                <span>♙</span>
+                Cliente
+            </button>
+
+            <button
+                id="adminBtn"
+                class="account-btn"
+                onclick="selecionarTipo('admin')"
+            >
+                <span>♜</span>
+                Administrador
+            </button>
+
+        </div>
+
+        <input
+            id="emailLogin"
+            type="email"
+            placeholder="E-mail"
+        >
+
+        <input
+            id="senhaLogin"
+            type="password"
+            placeholder="Senha"
+        >
+
+        <button
+            class="login-btn"
+            onclick="fazerLogin()"
+        >
+            Entrar
+        </button>
+
+        <p id="loginMensagem" class="login-mensagem"></p>
+
+    </div>
+
+</div>
+
+
+<!-- ================= LOJA DO CLIENTE ================= -->
+
+<div id="clienteArea" class="area-site">
+
+    <header class="site-header">
+
+        <h1>𝓝𝓲𝓬𝓴𝔂 𝓢𝓽𝓸𝓻𝓮</h1>
+
+        <div>
+            <span>Minha conta</span>
+
+            <button onclick="logout()">
+                Sair
+            </button>
+        </div>
+
+    </header>
+
+    <div class="cliente-conteudo">
+
+        <p>𝓝𝓲𝓬𝓴𝔂 𝓢𝓽𝓸𝓻𝓮</p>
+
+        <h2>Joias que contam histórias.</h2>
+
+        <p>
+            Bem-vindo à nossa coleção exclusiva.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ================= ÁREA ADMIN ================= -->
+
+<div id="adminArea" class="admin-area">
+
+    <header class="admin-header">
+
+        <div>
+
+            <span>PAINEL ADMINISTRATIVO</span>
+
+            <h1>𝓝𝓲𝓬𝓴𝔂 𝓢𝓽𝓸𝓻𝓮</h1>
+
+        </div>
+
+        <button onclick="logout()">
+            Sair da conta
+        </button>
+
+    </header>
+
+
+    <div class="admin-title">
+
+        <div>
+
+            <span>GERENCIAMENTO</span>
+
+            <h2>Produtos</h2>
+
+            <p>
+                Adicione, edite ou remova joias da loja.
+            </p>
+
+        </div>
+
+        <button onclick="abrirProduto()">
+            + Novo produto
+        </button>
+
+    </div>
+
+
+    <div class="categorias">
+
+        <button onclick="filtrar('Todos')">
+            Todos
+        </button>
+
+        <button onclick="filtrar('Anéis')">
+            Anéis
+        </button>
+
+        <button onclick="filtrar('Colares')">
+            Colares
+        </button>
+
+        <button onclick="filtrar('Brincos')">
+            Brincos
+        </button>
+
+        <button onclick="filtrar('Pulseiras')">
+            Pulseiras
+        </button>
+
+    </div>
+
+
+    <div id="produtos" class="produtos"></div>
+
+</div>
+
+
+<!-- ================= MODAL ================= -->
+
+<div id="modal" class="modal">
+
+    <div class="modal-box">
+
+        <span
+            class="fechar"
+            onclick="fecharModal()"
+        >
+            ×
+        </span>
+
+        <h2 id="tituloModal">
+            Novo produto
+        </h2>
+
+        <input
+            id="nome"
+            placeholder="Nome da joia"
+        >
+
+        <input
+            id="preco"
+            type="number"
+            placeholder="Preço"
+        >
+
+        <select id="categoria">
+
+            <option>Anéis</option>
+            <option>Colares</option>
+            <option>Brincos</option>
+            <option>Pulseiras</option>
+
+        </select>
+
+        <input
+            id="imagem"
+            placeholder="URL da imagem"
+        >
+
+        <button onclick="salvarProduto()">
+            Salvar produto
+        </button>
+
+    </div>
+
+</div>
+
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f5f1;
+    color: #27221d;
+}
+
+```html
+<!-- ================= LOGIN ================= -->
+
+<div id="loginPage" class="login-page">
+
+    <div class="login-box">
+
+        <div class="login-logo">
+            <strong>NICKY STORE</strong>
+        </div>
+
+        <h2>Bem-vindo</h2>
+        <p>Entre na sua conta para continuar.</p>
+
+        <div class="account-choice">
+
+            <button
+                id="clienteBtn"
+                class="account-btn active"
+                onclick="selecionarTipo('cliente')"
+            >
+                <span>♙</span>
+                Cliente
+            </button>
+
+            <button
+                id="adminBtn"
+                class="account-btn"
+                onclick="selecionarTipo('admin')"
+            >
+                <span>♜</span>
+                Administrador
+            </button>
+
+        </div>
+
+        <input
+            id="emailLogin"
+            type="email"
+            placeholder="E-mail"
+        >
+
+        <input
+            id="senhaLogin"
+            type="password"
+            placeholder="Senha"
+        >
+
+        <button
+            class="login-btn"
+            onclick="fazerLogin()"
+        >
+            Entrar
+        </button>
+
+        <p id="loginMensagem" class="login-mensagem"></p>
+
+    </div>
+
+</div>
+
+
+<!-- ================= LOJA DO CLIENTE ================= -->
+
+<div id="clienteArea" class="area-site">
+
+    <header class="site-header">
+
+        <h1>𝓝𝓲𝓬𝓴𝔂 𝓢𝓽𝓸𝓻𝓮</h1>
+
+        <div>
+            <span>Minha conta</span>
+
+            <button onclick="logout()">
+                Sair
+            </button>
+        </div>
+
+    </header>
+
+    <div class="cliente-conteudo">
+
+        <p>𝓝𝓲𝓬𝓴𝔂 𝓢𝓽𝓸𝓻𝓮</p>
+
+        <h2>Joias que contam histórias.</h2>
+
+        <p>
+            Bem-vindo à nossa coleção exclusiva.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ================= ÁREA ADMIN ================= -->
+
+<div id="adminArea" class="admin-area">
+
+    <header class="admin-header">
+
+        <div>
+
+            <span>PAINEL ADMINISTRATIVO</span>
+
+            <h1>𝓝𝓲𝓬𝓴𝔂 𝓢𝓽𝓸𝓻𝓮</h1>
+
+        </div>
+
+        <button onclick="logout()">
+            Sair da conta
+        </button>
+
+    </header>
+
+
+    <div class="admin-title">
+
+        <div>
+
+            <span>GERENCIAMENTO</span>
+
+            <h2>Produtos</h2>
+
+            <p>
+                Adicione, edite ou remova joias da loja.
+            </p>
+
+        </div>
+
+        <button onclick="abrirProduto()">
+            + Novo produto
+        </button>
+
+    </div>
+
+
+    <div class="categorias">
+
+        <button onclick="filtrar('Todos')">
+            Todos
+        </button>
+
+        <button onclick="filtrar('Anéis')">
+            Anéis
+        </button>
+
+        <button onclick="filtrar('Colares')">
+            Colares
+        </button>
+
+        <button onclick="filtrar('Brincos')">
+            Brincos
+        </button>
+
+        <button onclick="filtrar('Pulseiras')">
+            Pulseiras
+        </button>
+
+    </div>
+
+
+    <div id="produtos" class="produtos"></div>
+
+</div>
+
+
+<!-- ================= MODAL ================= -->
+
+<div id="modal" class="modal">
+
+    <div class="modal-box">
+
+        <span
+            class="fechar"
+            onclick="fecharModal()"
+        >
+            ×
+        </span>
+
+        <h2 id="tituloModal">
+            Novo produto
+        </h2>
+
+        <input
+            id="nome"
+            placeholder="Nome da joia"
+        >
+
+        <input
+            id="preco"
+            type="number"
+            placeholder="Preço"
+        >
+
+        <select id="categoria">
+
+            <option>Anéis</option>
+            <option>Colares</option>
+            <option>Brincos</option>
+            <option>Pulseiras</option>
+
+        </select>
+
+        <input
+            id="imagem"
+            placeholder="URL da imagem"
+        >
+
+        <button onclick="salvarProduto()">
+            Salvar produto
+        </button>
+
+    </div>
+
+</div>
+
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f5f1;
+    color: #27221d;
+}
+
+
+/* ================= LOGIN ================= */
+
+.login-page {
+    position: fixed;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(20,17,14,.72),
+            rgba(20,17,14,.72)
+        ),
+        #211d19;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+
+.login-box {
+    width: 390px;
+    background: #fff;
+    padding: 42px;
+    text-align: center;
+}
+
+
+.login-logo strong {
+    font-family: "Brush Script MT", cursive;
+    font-size: 38px;
+    font-weight: normal;
+    color: #9c7c4e;
+}
+
+
+.login-box h2 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: normal;
+    margin: 35px 0 5px;
+}
+
+
+.login-box > p {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+
+.account-choice {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+
+.account-btn {
+    flex: 1;
+    padding: 12px;
+    background: white;
+    border: 1px solid #ddd6cc;
+    cursor: pointer;
+    color: #777;
+}
+
+
+.account-btn.active {
+    background: #211d19;
+    color: white;
+    border-color: #211d19;
+}
+
+
+.account-btn span {
+    margin-right: 5px;
+}
+
+
+.login-box input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd6cc;
+    outline: none;
+}
+
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    border: 0;
+    background: #211d19;
+    color: white;
+    cursor: pointer;
+}
+
+
+.login-btn:hover {
+    background: #9c7c4e;
+}
+
+
+.login-mensagem {
+    min-height: 18px;
+    color: #a34f45 !important;
+}
+
+
+/* ================= ÁREAS ================= */
+
+.area-site,
+.admin-area {
+    display: none;
+}
+
+
+/* ================= CLIENTE ================= */
+
+.site-header {
+    height: 80px;
+    background: #201c18;
+    color: white;
+    padding: 0 45px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.site-header h1 {
+    font-family: "Brush Script MT", cursive;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+
+.site-header button,
+.site-header span {
+    color: white;
+    background: transparent;
+    border: 0;
+    margin-left: 15px;
+}
+
+
+.cliente-conteudo {
+    text-align: center;
+    padding: 150px 20px;
+}
+
+
+.cliente-conteudo h2 {
+    font-family: Georgia, serif;
+    font-size: 45px;
+    font-weight: normal;
+}
+
+
+.cliente-conteudo p:first-child {
+    color: #9c7c4e;
+    letter-spacing: 4px;
+    font-size: 10px;
+}
+
+
+/* ================= ADMIN ================= */
+
+.admin-area {
+    min-height: 100vh;
+}
+
+
+.admin-header {
+    background: #201c18;
+    color: white;
+    padding: 25px 45px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.admin-header span {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #b59a70;
+}
+
+
+.admin-header h1 {
+    font-family: "Brush Script MT", cursive;
+    font-size: 34px;
+    font-weight: normal;
+    margin: 5px 0 0;
+}
+
+
+.admin-header button {
+    background: transparent;
+    color: white;
+    border: 1px solid #655b50;
+    padding: 10px 18px;
+    cursor: pointer;
+}
+
+
+.admin-title {
+    padding: 45px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+
+.admin-title span {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #9c7c4e;
+}
+
+
+.admin-title h2 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+
+.admin-title p {
+    color: #999;
+    font-size: 13px;
+}
+
+
+.admin-title button {
+    background: #201c18;
+    color: white;
+    border: 0;
+    padding: 13px 20px;
+    cursor: pointer;
+}
+
+
+/* CATEGORIAS */
+
+.categorias {
+    padding: 0 45px 25px;
+    display: flex;
+    gap: 8px;
+}
+
+
+.categorias button {
+    background: white;
+    border: 1px solid #ddd6cc;
+    padding: 9px 16px;
+    cursor: pointer;
+}
+
+
+.categorias button:hover {
+    background: #201c18;
+    color: white;
+}
+
+
+/* PRODUTOS */
+
+.produtos {
+    padding: 0 45px 50px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(230px, 1fr));
+
+    gap: 20px;
+}
+
+
+.produto {
+    background: white;
+    border: 1px solid #e5dfd7;
+}
+
+
+.produto img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+
+.produto-info {
+    padding: 17px;
+}
+
+
+.produto-info h3 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    margin: 0 0 7px;
+}
+
+
+.produto-info p {
+    color: #9c7c4e;
+}
+
+
+.acoes {
+    display: flex;
+    gap: 7px;
+    margin-top: 15px;
+}
+
+
+.acoes button {
+    padding: 7px 12px;
+    border: 1px solid #ddd6cc;
+    background: white;
+    cursor: pointer;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.6);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10000;
+}
+
+
+.modal-box {
+    width: 390px;
+    background: white;
+    padding: 32px;
+    position: relative;
+}
+
+
+.modal-box h2 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+
+.modal-box input,
+.modal-box select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd6cc;
+}
+
+
+.modal-box button {
+    width: 100%;
+    padding: 13px;
+    border: 0;
+    background: #201c18;
+    color: white;
+    cursor: pointer;
+}
+
+
+.fechar {
+    position: absolute;
+    right: 18px;
+    top: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+</style>
+
+
+<script>
+
+/* ==========================================
+   CONTA ÚNICA DO ADMINISTRADOR
+========================================== */
+
+const contaAdmin = {
+
+    email: "nickyzinha1701.gmail.com",
+
+    senha: "17o12oo9"
+
+};
+
+
+/* ==========================================
+   PRODUTOS
+========================================== */
+
+let produtos = [
+
+    {
+        nome: "Anel Étoile",
+        preco: 3890,
+        categoria: "Anéis",
+        imagem:
+        "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500"
+    },
+
+    {
+        nome: "Colar Lumière",
+        preco: 6290,
+        categoria: "Colares",
+        imagem:
+        "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500"
+    },
+
+    {
+        nome: "Brinco Aurora",
+        preco: 2490,
+        categoria: "Brincos",
+        imagem:
+        "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500"
+    }
+
+];
+
+
+let tipoConta = "cliente";
+
+let categoriaAtual = "Todos";
+
+let editando = null;
+
+
+/* ==========================================
+   ESCOLHER CLIENTE OU ADMIN
+========================================== */
+
+function selecionarTipo(tipo) {
+
+    tipoConta = tipo;
+
+    document
+        .getElementById("clienteBtn")
+        .classList.remove("active");
+
+    document
+        .getElementById("adminBtn")
+        .classList.remove("active");
+
+
+    if (tipo === "cliente") {
+
+        document
+            .getElementById("clienteBtn")
+            .classList.add("active");
+
+    } else {
+
+        document
+            .getElementById("adminBtn")
+            .classList.add("active");
+
+    }
+
+
+    document.getElementById(
+        "loginMensagem"
+    ).innerText = "";
+
+}
+
+
+/* ==========================================
+   LOGIN
+========================================== */
+
+function fazerLogin() {
+
+    const email =
+        document.getElementById("emailLogin").value;
+
+    const senha =
+        document.getElementById("senhaLogin").value;
+
+
+    const mensagem =
+        document.getElementById("loginMensagem");
+
+
+    /* LOGIN ADMIN */
+
+    if (tipoConta === "admin") {
+
+        if (
+            email === contaAdmin.email &&
+            senha === contaAdmin.senha
+        ) {
+
+            document.getElementById(
+                "loginPage"
+            ).style.display = "none";
+
+
+            document.getElementById(
+                "adminArea"
+            ).style.display = "block";
+
+
+            mostrarProdutos();
+
+        } else {
+
+            mensagem.innerText =
+                "E-mail ou senha de administrador incorretos.";
+
+        }
+
+        return;
+
+    }
+
+
+    /* LOGIN CLIENTE */
+
+    if (tipoConta === "cliente") {
+
+        if (!email || !senha) {
+
+            mensagem.innerText =
+                "Preencha seu e-mail e senha.";
+
+            return;
+
+        }
+
+
+        document.getElementById(
+            "loginPage"
+        ).style.display = "none";
+
+
+        document.getElementById(
+            "clienteArea"
+        ).style.display = "block";
+
+    }
+
+}
+
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+function logout() {
+
+    document.getElementById(
+        "adminArea"
+    ).style.display = "none";
+
+
+    document.getElementById(
+        "clienteArea"
+    ).style.display = "none";
+
+
+    document.getElementById(
+        "loginPage"
+    ).style.display = "flex";
+
+
+    document.getElementById(
+        "emailLogin"
+    ).value = "";
+
+    document.getElementById(
+        "senhaLogin"
+    ).value = "";
+
+}
+
+
+/* ==========================================
+   PRODUTOS
+========================================== */
+
+function mostrarProdutos() {
+
+    const area =
+        document.getElementById("produtos");
+
+
+    let lista = produtos;
+
+
+    if (categoriaAtual !== "Todos") {
+
+        lista =
+            produtos.filter(
+                p => p.categoria === categoriaAtual
+            );
+
+    }
+
+
+    area.innerHTML = lista.map((produto, index) => `
+
+        <div class="produto">
+
+            <img src="${produto.imagem}">
+
+            <div class="produto-info">
+
+                <h3>${produto.nome}</h3>
+
+                <p>
+                    R$ ${produto.preco.toLocaleString("pt-BR")}
+                </p>
+
+                <small>
+                    ${produto.categoria}
+                </small>
+
+                <div class="acoes">
+
+                    <button
+                        onclick="editarProduto(${index})"
+                    >
+                        ✎ Editar
+                    </button>
+
+                    <button
+                        onclick="excluirProduto(${index})"
+                    >
+                        🗑 Excluir
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    `).join("");
+
+}
+
+
+/* ==========================================
+   FILTRO
+========================================== */
+
+function filtrar(categoria) {
+
+    categoriaAtual = categoria;
+
+    mostrarProdutos();
+
+}
+
+
+/* ==========================================
+   NOVO PRODUTO
+========================================== */
+
+function abrirProduto() {
+
+    editando = null;
+
+    document.getElementById(
+        "tituloModal"
+    ).innerText = "Novo produto";
+
+
+    document.getElementById("nome").value = "";
+
+    document.getElementById("preco").value = "";
+
+    document.getElementById("imagem").value = "";
+
+
+    document.getElementById(
+        "modal"
+    ).style.display = "flex";
+
+}
+
+
+/* ==========================================
+   EDITAR
+========================================== */
+
+function editarProduto(index) {
+
+    editando = index;
+
+    const produto = produtos[index];
+
+
+    document.getElementById(
+        "tituloModal"
+    ).innerText = "Editar produto";
+
+
+    document.getElementById("nome").value =
+        produto.nome;
+
+    document.getElementById("preco").value =
+        produto.preco;
+
+    document.getElementById("categoria").value =
+        produto.categoria;
+
+    document.getElementById("imagem").value =
+        produto.imagem;
+
+
+    document.getElementById(
+        "modal"
+    ).style.display = "flex";
+
+}
+
+
+/* ==========================================
+   SALVAR
+========================================== */
+
+function salvarProduto() {
+
+    const produto = {
+
+        nome:
+            document.getElementById("nome").value,
+
+        preco:
+            Number(
+                document.getElementById("preco").value
+            ),
+
+        categoria:
+            document.getElementById("categoria").value,
+
+        imagem:
+            document.getElementById("imagem").value
+
+    };
+
+
+    if (!produto.nome || !produto.preco) {
+
+        alert("Preencha os dados da joia.");
+
+        return;
+
+    }
+
+
+    if (editando === null) {
+
+        produtos.push(produto);
+
+    } else {
+
+        produtos[editando] = produto;
+
+    }
+
+
+    fecharModal();
+
+    mostrarProdutos();
+
+}
+
+
+/* ==========================================
+   EXCLUIR
+========================================== */
+
+function excluirProduto(index) {
+
+    if (
+        confirm(
+            "Deseja realmente excluir esta joia?"
+        )
+    ) {
+
+        produtos.splice(index, 1);
+
+        mostrarProdutos();
+
+    }
+
+}
+
+
+/* ==========================================
+   FECHAR MODAL
+========================================== */
+
+function fecharModal() {
+
+    document.getElementById(
+        "modal"
+    ).style.display = "none";
+
+}
+
+</script>
+```
